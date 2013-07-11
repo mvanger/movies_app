@@ -29,6 +29,13 @@ class MoviesController < ApplicationController
     redirect_to '/movies'
   end
 
+  def rating
+    movie = Movie.find(params[:id])
+    movie.rating += 1
+    movie.save
+    redirect_to "/movies/#{movie.id}"
+  end
+
   def destroy
     movie = Movie.find(params[:id])
     movie.destroy

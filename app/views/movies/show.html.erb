@@ -1,3 +1,5 @@
 <%= render 'moviedeets' %>
 
+<%= button_to "+", rating_path(@movie, rating: "+1") %>
+
 <%= button_to "Delete movie", destroy_movie_path(@movie.id) %>

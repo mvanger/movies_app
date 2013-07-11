@@ -7,11 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'navbar' %>
 
-<%= yield %>
-<br>
-<%= link_to("Home", home_path) %> |
-<%= link_to("Movies", movies_path) %>
+  <%= yield %>
 
 </body>
 </html>

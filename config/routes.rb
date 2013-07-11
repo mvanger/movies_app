@@ -4,6 +4,7 @@ MoviesApp::Application.routes.draw do
   get '/movies/:id/details' => 'movies#details', as: 'details'
   post '/movies/:id/save' => 'movies#save', as: 'save_movie'
   post '/movies/:id/destroy' => 'movies#destroy', as: 'destroy_movie'
+  post '/movies/:id/rating' => 'movies#rating', as: 'rating'
   resources :movies
   # The priority is based upon order of creation:
   # first created -> highest priority.
