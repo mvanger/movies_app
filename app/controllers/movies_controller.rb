@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
 
   def save
     query = Imdb::Movie.new(params[:id])
-    movie = Movie.new()
+    movie = Movie.new
     movie.title = query.title
     movie.year = query.year
     movie.plot = query.plot
@@ -28,5 +28,11 @@ class MoviesController < ApplicationController
     movie.rating = params[:rating]
     movie.save
     redirect_to '/movies'
+  end
+
+  def destroy
+    movie = Movie.find(params[:id])
+    movie.destroy
+    redirect_to("/movies")
   end
 end

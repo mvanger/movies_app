@@ -4,3 +4,5 @@
 <p>Plot: <%= @movie.plot %></p>
 <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
 <p>My Rating: <%= @movie.rating %></p>
+
+<%= button_to "Delete movie", destroy_movie_path(@movie.id) %>
