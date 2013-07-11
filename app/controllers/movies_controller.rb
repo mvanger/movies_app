@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
     @faves = Movie.where(rating: 100)
     @saves = Movie.where('rating < ?', 100)
   end

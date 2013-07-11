@@ -1,10 +1,5 @@
-<h1><%= @movie.title %></h1>
+<%= render 'moviedeets' %>
 
-<p>Year: <%= @movie.year %></p>
-<p>Plot: <%= @movie.plot %></p>
-<p>MPAA Rating: <%= @movie.mpaa_rating %></p>
-<p>IMDB Rating: <%= @movie.rating %></p>
-
-<%= button_to "Save movie", save_movie_path(@movie.id, rating: 50) %>
+<%= button_to "Save movie", save_movie_path(@movie.id, rating: 50) %><br/>
 
 <%= button_to "Fave movie", save_movie_path(@movie.id, rating: 100) %>

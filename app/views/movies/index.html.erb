@@ -7,7 +7,7 @@
   <button>Search</button>
 </form>
 
-<% if @searched.present? %>
+<% if @searched %>
   <% @searched.each do |movie| %>
     <%= link_to(movie.title, details_path(movie.id)) %><br>
   <% end %>
